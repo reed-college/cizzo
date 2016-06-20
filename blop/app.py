@@ -14,10 +14,11 @@ def login():
     return render_template('signin.html')
 
 
-@app.route('/submit', methods=['GET','POST'])
+@app.route('/submit', methods=['GET', 'POST'])
 def submit():
-    return render_template('submit.html')
-
+    types = models.Type.query.all()
+    print(types)
+    return render_template('submit.html', types=types)
 
 @app.route('/blotter')
 def blotter():

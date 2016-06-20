@@ -8,12 +8,8 @@
 	<form action="/processform" method="post">
 		<div id='dynamicSubtype'>
 			<label for="incident type">Incident Code</label><br>
-			<select id="incident dropdown" name="incident dropdown">
-				<option value="0">Select a Code</option>
-				<option value="1">Code 1</option>
-				<option value="2">Code 2</option>
-				<option value="3">Code 3</option>
-				<option value="4">Code 4</option>
+			<select id="incident dropdown" name="incident dropdown" onload="populate()">
+				<option value="0">Select an Incident Type</option>
 			</select><br>
 		</div>
 		<!--- This is for is we want to add more dropdown menus using a button.

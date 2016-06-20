@@ -33,3 +33,10 @@ function removeElement()  {
 	divIds = divIds - 1;
 	d.removeChild(divNum);
 }
+
+function populate(types)  {
+	var dropDown = document.getElementById("incident type")
+	for (var i = 0; i < types.length; i++)  {
+		dropDown[dropDown.length] = new Option(types[i], types[i])
+	}
+}
